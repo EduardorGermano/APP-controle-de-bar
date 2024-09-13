@@ -10,14 +10,3 @@ bool validaEstoque(int) {
   var liberado = estoque >= limiteEstoque;
   return liberado;
 }
-
-
-
-
-/*/parametros
- - posiconal 
-    obrigatório
-    [] - valor padrão
- - nomeado {}
-    não é obrigatório - definir valor padrão
-    required*/
