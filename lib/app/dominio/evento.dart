@@ -1,5 +1,5 @@
-import 'package:controle_de_bar/app/bar/bar.dart';
-import 'package:controle_de_bar/app/estoque/estoque.dart';
+import 'package:controle_de_bar/app/dominio/bar.dart';
+import 'package:controle_de_bar/app/dominio/estoque.dart';
 
 class Evento {
   int id;

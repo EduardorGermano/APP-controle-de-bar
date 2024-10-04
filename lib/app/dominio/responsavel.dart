@@ -1,4 +1,4 @@
-import 'package:controle_de_bar/app/bar/bar.dart';
+import 'package:controle_de_bar/app/dominio/bar.dart';
 
 class Responsavel {
   int id;
