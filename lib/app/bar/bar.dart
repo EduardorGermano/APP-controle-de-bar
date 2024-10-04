@@ -1,24 +1,27 @@
-
 class Bar {
-  late String nome;
-  late String local;
-  late bool status = true;
+  int id;
+  String nome;
+  String localizacao;
+  int estoqueAtual;
+  String responsavel;
 
   Bar({
+    required this.id,
     required this.nome,
-    required this.local,
-    required this.status,
+    required this.localizacao,
+    required this.estoqueAtual,
+    required this.responsavel,
   });
 
-  void eNomeVazio() {
-    if (nome.isEmpty) throw Exception("Nome não pode ser vazio");
+  void receberEstoque(int quantidade) {
+    estoqueAtual += quantidade;
   }
 
-  void localVazio() {
-    if (local.isEmpty) throw Exception("Local não pode ser vazio");
+  void registrarConsumo(int quantidade) {
+    estoqueAtual -= quantidade;
   }
 
-  void statusAtivo() {
-    if (status = false) throw Exception("Produto deve ser ativo");
+  int contarEstoqueFinal() {
+    return estoqueAtual;
   }
 }
