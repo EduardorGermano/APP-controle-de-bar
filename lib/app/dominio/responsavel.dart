@@ -11,11 +11,5 @@ class Responsavel {
     this.bar,
   });
 
-  void registrarEstoqueFinal() {
-    if (bar != null) {
-      print('Estoque final do bar ${bar!.nome}: ${bar!.contarEstoqueFinal()}');
-    } else {
-      print('Nenhum bar associado a este responsável.');
-    }
-  }
+
 }

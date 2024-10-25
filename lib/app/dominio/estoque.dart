@@ -6,7 +6,6 @@ class Estoque {
   Map<Bar, Map<Bebida, int>> estoqueDistribuido = {};
 
   void distribuirBebidas(Bar bar, Bebida bebida, int quantidade) {
-    bebida.distribuir(quantidade, bar);
 
     if (!estoqueDistribuido.containsKey(bar)) {
       estoqueDistribuido[bar] = {};

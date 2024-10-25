@@ -15,12 +15,5 @@ class Bebida {
     quantidadeTotal += quantidade;
   }
 
-  void distribuir(int quantidade, Bar bar) {
-    if (quantidadeTotal >= quantidade) {
-      bar.receberEstoque(quantidade);
-      quantidadeTotal -= quantidade;
-    } else {
-      print('Estoque insuficiente.');
-    }
-  }
+
 }
