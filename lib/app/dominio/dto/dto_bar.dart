@@ -11,5 +11,4 @@ class DTOBar {
       this.localizacao,
       required this.estoqueAtual,
       required this.responsavel});
-      
 }

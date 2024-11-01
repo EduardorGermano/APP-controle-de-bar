@@ -28,8 +28,8 @@ class Bar {
     return await dao.alterar(id);
   }
 
-  Future<List<DTOBar>> consultar() async {
-    return await dao.consultar();
+  Future<List<DTOBar>> consultar(DTOBar dto) async {
+    return await dao.consultar(dto);
   }
 
   String? get nome => _nome;

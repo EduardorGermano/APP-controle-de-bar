@@ -51,7 +51,7 @@ class DAOBar implements IDAOBar {
   }
 
   @override
-  Future<List<DTOBar>> consultar() async {
+  Future<List<DTOBar>> consultar(dto) async {
     _db = await Conexao.iniciar();
     var resultado = await _db.rawQuery(sqlConsultar);
     List<DTOBar> professores = List.generate(resultado.length, (i) {

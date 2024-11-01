@@ -25,7 +25,7 @@ class APBar {
     return true;
   }
 
-  Future<List<DTOBar>> consultar() async {
-    return await dominio.consultar();
+  Future<List<DTOBar>> consultar(DTOBar dto) async {
+    return await dominio.consultar(dto);
   }
 }

@@ -95,7 +95,7 @@ main() async {
         estoqueAtual: 1000,
         responsavel: 'Fernando');
     dto = await dao.salvar(dto);
-    var resultado = await dao.consultar();
+    var resultado = await dao.consultar(dto);
     expect(resultado.length, isPositive);
   });
 }
