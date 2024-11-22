@@ -41,6 +41,18 @@ class _TesteState extends State<Teste> {
               },
               child: Text('Cadastro de Bebida'),
             ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'listaBebida', arguments: texto)
+                    .then((value) {
+                  setState(() {
+                    texto = 'Lista de Bebidas';
+                  });
+                });
+              },
+              child: Text('Lista de Bebida'),
+            ),
           ],
         ),
       ),

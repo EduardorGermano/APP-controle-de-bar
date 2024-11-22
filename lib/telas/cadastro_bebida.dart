@@ -1,25 +1,12 @@
 import 'package:flutter/material.dart';
+import '../app/dominio/dto/dto_bebida.dart';
 
-class DTOBebida {
-  dynamic id;
-  String nome;
-  int quantidade;
-  int ml;
-
-  DTOBebida({
-    this.id,
-    required this.nome,
-    required this.quantidade,
-    required this.ml,
-  });
-}
-
-class FormularioBebida extends StatefulWidget {
+class CadastroBebida extends StatefulWidget {
   @override
-  State<FormularioBebida> createState() => _FormularioBebidaState();
+  State<CadastroBebida> createState() => _CadastroBebidaState();
 }
 
-class _FormularioBebidaState extends State<FormularioBebida> {
+class _CadastroBebidaState extends State<CadastroBebida> {
   final _formKey = GlobalKey<FormState>();
   final _nomeController = TextEditingController();
   final _quantidadeController = TextEditingController();

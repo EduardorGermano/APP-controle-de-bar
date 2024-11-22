@@ -1,6 +1,7 @@
 import 'package:controle_de_bar/app/widget/bar_lista.dart';
-import 'package:controle_de_bar/cadastro_bebida.dart';
-import 'package:controle_de_bar/formulario.dart';
+import 'package:controle_de_bar/telas/cadastro_bebida.dart';
+import 'package:controle_de_bar/telas/formulario.dart';
+import 'package:controle_de_bar/telas/lista_bebida.dart';
 import 'package:flutter/material.dart';
 import './teste.dart';
 
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         '/': (build) => Teste(),
         'teste': (build) => Teste(),
         'formulario': (build) => Formulario(),
-        'cadastroBebida': (build) => FormularioBebida()
+        'cadastroBebida': (build) => CadastroBebida(),
+        'listaBebida': (build) => ListaBebida()
       },
     );
   }
