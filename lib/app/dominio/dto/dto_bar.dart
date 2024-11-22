@@ -1,9 +1,9 @@
 class DTOBar {
   dynamic id;
-  final String nome;
-  final String? localizacao;
-  final int estoqueAtual;
-  final String responsavel;
+  String nome;
+  String? localizacao;
+  int estoqueAtual;
+  String responsavel;
 
   DTOBar(
       {this.id,

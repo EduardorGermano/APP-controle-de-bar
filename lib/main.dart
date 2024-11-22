@@ -1,8 +1,8 @@
 import 'package:controle_de_bar/app/widget/bar_lista.dart';
+import 'package:controle_de_bar/cadastro_bebida.dart';
 import 'package:controle_de_bar/formulario.dart';
 import 'package:flutter/material.dart';
 import './teste.dart';
-import './treino.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (build) => Teste(),
         'teste': (build) => Teste(),
-        'treino': (build) => Treino(),
-        'formulario': (build) => Formulario()
+        'formulario': (build) => Formulario(),
+        'cadastroBebida': (build) => FormularioBebida()
       },
     );
   }

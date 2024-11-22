@@ -6,12 +6,10 @@ import 'package:sqflite/sqflite.dart';
 class DAOBar implements IDAOBar {
   late Database _db;
   final sqlInserir = '''
-    INSERT INTO bar (nome, localizacao, estoque_atual, responsavel)
-    VALUES (?,?,?,?,?)
+    INSERT INTO bar (nome, localizacao, estoque_atual, responsavel) VALUES (?,?,?,?,?);
   ''';
   final sqlAlterar = '''
-    UPDATE bar SET nome=?, localizacao=?, estoque_atual=?, responsavel=?
-    WHERE id = ?
+    UPDATE bar SET nome=?, localizacao=?, estoque_atual=?, responsavel=? WHERE id = ?;
   ''';
   final sqlConsultarPorId = '''
     SELECT * FROM bar WHERE id = ?;
@@ -41,20 +39,20 @@ class DAOBar implements IDAOBar {
   Future<DTOBar> consultarPorId(int id) async {
     _db = await Conexao.iniciar();
     var resultado = (await _db.rawQuery(sqlConsultarPorId, [id])).first;
-    DTOBar professor = DTOBar(
+    DTOBar bar = DTOBar(
         id: resultado['id'],
         nome: resultado['nome'].toString(),
         localizacao: resultado['localizacao'].toString(),
         estoqueAtual: resultado['estoque_atual'] as int,
         responsavel: resultado['responsavel'].toString());
-    return professor;
+    return bar;
   }
 
   @override
   Future<List<DTOBar>> consultar(dto) async {
     _db = await Conexao.iniciar();
     var resultado = await _db.rawQuery(sqlConsultar);
-    List<DTOBar> professores = List.generate(resultado.length, (i) {
+    List<DTOBar> bares = List.generate(resultado.length, (i) {
       var linha = resultado[i];
       return DTOBar(
           id: linha['id'],
@@ -63,6 +61,6 @@ class DAOBar implements IDAOBar {
           estoqueAtual: linha['estoque_atual'] as int,
           responsavel: linha['responsavel'].toString());
     });
-    return professores;
+    return bares;
   }
 }

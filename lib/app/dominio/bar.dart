@@ -56,8 +56,8 @@ class Bar {
   }
 
   set estoqueAtual(int? estoqueAtual) {
-    if (estoqueAtual == null) throw Exception('ID não pode ser nulo');
-    if (estoqueAtual < 0) throw Exception('ID não pode ser negativo');
+    if (estoqueAtual == null) throw Exception('Estoque não pode ser nulo');
+    if (estoqueAtual < 0) throw Exception('Estoque não pode ser negativo');
     _estoqueAtual = estoqueAtual;
   }
 

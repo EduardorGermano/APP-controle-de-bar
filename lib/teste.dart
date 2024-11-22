@@ -6,7 +6,7 @@ class Teste extends StatefulWidget {
 }
 
 class _TesteState extends State<Teste> {
-  var texto = 'boa noite';
+  var texto = 'Controle Bar';
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +20,6 @@ class _TesteState extends State<Teste> {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, 'treino', arguments: texto)
-                    .then((value) {
-                  setState(() {
-                    texto = 'atualizou';
-                  });
-                });
-              },
-              child: Text('Ok'),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
                 Navigator.pushNamed(context, 'formulario', arguments: texto)
                     .then((value) {
                   setState(() {
@@ -40,6 +28,18 @@ class _TesteState extends State<Teste> {
                 });
               },
               child: Text('Formulario'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'cadastroBebida', arguments: texto)
+                    .then((value) {
+                  setState(() {
+                    texto = 'Cadastro de Bebidas';
+                  });
+                });
+              },
+              child: Text('Cadastro de Bebida'),
             ),
           ],
         ),
